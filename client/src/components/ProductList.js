@@ -1,9 +1,18 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
+import { fetchAllProducts } from '../actions/products'
+import { Link } from 'react-router-dom'
 
 export class ProductList extends PureComponent {
+
+componentWillMount(){
+  this.props.fetchAllProducts()
+}
+
   render() {
-    const {products} = this.props
+    const { products } = this.props.products
+    // {console.log(products)}
+    
     return (
       <div>
         <h2>Product List</h2>
@@ -15,11 +24,11 @@ export class ProductList extends PureComponent {
             </tr>
           </thead>
           <tbody>
-            {products.map(p => 
+            { products.map(p => 
             <tr key={p.id} >
-              <td>{p.title}</td>
+              <td><Link to={`/products/${p.id}`}>{p.title}</Link></td>
               <td>&euro; {p.price}.00</td>
-            </tr>)}
+            </tr>) }
           </tbody>
         </table>
       </div>
@@ -27,6 +36,10 @@ export class ProductList extends PureComponent {
   }
 }
 
-const mapStateToProps = ({products}) => ({products})
+const mapStateToProps = (state) => {
+  return {
+    products: state.products
+  }
+}
 
-export default connect(mapStateToProps)(ProductList)
+export default connect(mapStateToProps, { fetchAllProducts })(ProductList)

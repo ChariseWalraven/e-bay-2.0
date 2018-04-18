@@ -27,10 +27,6 @@ export class ProductList extends PureComponent {
   }
 }
 
-const mapStateToProps= (state) => {
-  return {
-     products: state.products
-    }
-  }
+const mapStateToProps = ({products}) => ({products})
 
 export default connect(mapStateToProps)(ProductList)

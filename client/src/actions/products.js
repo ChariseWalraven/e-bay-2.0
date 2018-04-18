@@ -25,13 +25,12 @@ export const fetchProduct = (productId) => (dispatch) => {
     .catch(err => console.error(err))
 }
 
-export const createProduct = (product) => (dispatch, getState) => {
-  const state = getState()
+export const createProduct = (product) => (dispatch) => {
   request
   .post(`${baseUrl}/products`)
   .send(product)
   .then(res => {
-    console.log(res.body)
+    // console.log(res.body)
     dispatch({
     type: CREATE_PRODUCT,
     payload: res.body

@@ -21,7 +21,6 @@ class Form extends PureComponent {
 
   
   render(){
-    const initialValues = this.props.initialValues
     return (
       <div>
         <form onSubmit={this.handleSubmit}>

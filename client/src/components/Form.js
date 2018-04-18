@@ -1,5 +1,9 @@
 import React, { PureComponent } from 'react'
 import Button from 'material-ui/Button';
+import { withStyles } from 'material-ui/styles';
+import teal from 'material-ui/colors/teal'
+
+const primary = teal[400]
 
 class Form extends PureComponent {
   state = {}
@@ -62,7 +66,7 @@ class Form extends PureComponent {
               onChange={this.handleChange} />
           </div>
 
-          <Button type='submit'>Done</Button>
+          <Button variant="raised" type='submit' color="primary">Done</Button>
         </form>
       </div>
     )

@@ -6,8 +6,6 @@ import './App.css';
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 import CssBaseline from 'material-ui/CssBaseline';
 
-
-
 class App extends Component {
   render() {
     return (
@@ -15,7 +13,7 @@ class App extends Component {
       <CssBaseline />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to The New Ebay</h1>
+          {/* <h1 className="App-title">Welcome to The New Ebay</h1> */}
         </header>
         <Router>
           <div>

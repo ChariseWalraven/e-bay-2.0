@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import Button from 'material-ui/Button';
 
 class Form extends PureComponent {
   state = {}
@@ -61,7 +62,7 @@ class Form extends PureComponent {
               onChange={this.handleChange} />
           </div>
 
-          <button type='submit'>Done</button>
+          <Button type='submit'>Done</Button>
         </form>
       </div>
     )

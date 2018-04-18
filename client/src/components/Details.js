@@ -1,6 +1,9 @@
 import React, { PureComponent } from 'react'
 import { fetchProduct } from '../actions/products'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
+import Button from 'material-ui/Button';
+
 
 export class Details extends PureComponent {
   componentWillMount(props) {
@@ -10,6 +13,7 @@ export class Details extends PureComponent {
     const { product } = this.props
     return (
       <div className="Details">
+        <Button><Link to={`/products/`}>Back</Link></Button>
         {console.log(product)}
         <div>
           <strong>Title:</strong>

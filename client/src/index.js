@@ -7,12 +7,9 @@ import 'typeface-roboto'
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-setTimeout(() => {
   ReactDOM.render(
     <Provider store={store}>
       <App />
     </Provider>,
    document.getElementById('root'));
   registerServiceWorker();
-
-},1000)

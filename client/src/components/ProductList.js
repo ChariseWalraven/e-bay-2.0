@@ -20,7 +20,7 @@ export class ProductList extends PureComponent {
     
     return (
       <div>
-        <h2>Product List</h2>
+        <h3>Product List</h3>
         <table>
           <thead>
             <tr>

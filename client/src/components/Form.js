@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import Button from 'material-ui/Button';
 
 class Form extends PureComponent {
   state = {}
@@ -21,7 +22,6 @@ class Form extends PureComponent {
 
   
   render(){
-    const initialValues = this.props.initialValues
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -62,7 +62,7 @@ class Form extends PureComponent {
               onChange={this.handleChange} />
           </div>
 
-          <button type='submit'>Done</button>
+          <Button variant="raised" type='submit' className="teal">Done</Button>
         </form>
       </div>
     )

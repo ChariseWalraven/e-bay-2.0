@@ -1,17 +1,16 @@
 .App {
   text-align: center;
+  background-color: white!important;
 }
 
 .App-logo {
-  animation: App-logo-pulse infinite 10s linear;
+  /* animation: App-logo-pulse infinite 10s linear; */
   height: 80px;
 }
 
 .App-header {
-  background-color: rgb(255, 255, 255);
   height: 150px;
   padding: 20px;
-  color: white;
 }
 
 .App-title {
@@ -23,9 +22,8 @@
 }
 
 .Details {
-  /* display: inline-flex; */
   display: inline-block;
-  line-height: 32px
+  line-height: 24px
 }
 
 table {
@@ -34,7 +32,58 @@ table {
   line-height: 24px;
 }
 
-@keyframes App-logo-pulse {
+.MuiTable-root-1 {
+    width: 70%!important;
+}
+
+h3 {
+  margin: 0;
+}
+
+.teal {
+  background-color: #26A69A!important;
+}
+
+/* @keyframes App-logo-pulse {
   0% { transform: scale(1.0); }
   50% { transform: scale(1.1); }
+} */
+/* 
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
 }
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */ /*
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */ /* 
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */ /*
+  text-rendering: optimizeLegibility; 
+
+  /* Support for Firefox. */ /*
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */ /*
+  font-feature-settings: 'liga';
+} 
+*/

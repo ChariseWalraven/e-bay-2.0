@@ -15,8 +15,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const routing_controllers_1 = require("routing-controllers");
 const entity_1 = require("./entity");
 let ProductController = class ProductController {
-    getProduct(id) {
-        return entity_1.default.findOneById(id);
+    async getProduct(id) {
+        const product = await entity_1.default.findOneById(id);
+        return product;
     }
     async getAllProducts() {
         const products = await entity_1.default.find();

@@ -2,16 +2,17 @@ import { JsonController, Get, Post, HttpCode, Body, Param } from 'routing-contro
 // import productsById, { Product } from './data'
 import Product from './entity'
 
-// type ProductList = { products: Product[] }
+type ProductList = { products: Product[] }
 
 @JsonController()
 export default class ProductController {
 //single product as practice
   @Get('/products/:id')
-  getProduct(
+  async getProduct(
     @Param('id') id: number
   ) : Product {
-    return Product.findOneById(id)
+    const product = await Product.findOneById(id)
+    return product
   }
   // all products endpoint
   @Get('/products')

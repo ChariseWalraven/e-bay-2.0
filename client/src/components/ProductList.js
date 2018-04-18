@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { fetchAllProducts, createProduct } from '../actions/products'
+import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
 import { Link } from 'react-router-dom'
 import Form from './Form';
 
@@ -21,21 +22,21 @@ export class ProductList extends PureComponent {
     return (
       <div>
         <h3>Product List</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>Title</TableCell>
+              <TableCell>Price</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
             { products.map(p => 
-            <tr key={p.id} >
-              <td><Link to={`/products/${p.id}`}>{p.title}</Link></td>
-              <td>&euro; {p.price}.00</td>
-            </tr>) }
-          </tbody>
-        </table>
+            <TableRow key={p.id} >
+              <TableCell><Link to={`/products/${p.id}`}>{p.title}</Link></TableCell>
+              <TableCell>&euro; {p.price}.00</TableCell>
+            </TableRow>) }
+          </TableBody>
+        </Table>
         <Form onSubmit={this.createProduct} />
       </div>
     )

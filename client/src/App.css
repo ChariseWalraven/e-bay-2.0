@@ -32,8 +32,16 @@ table {
   line-height: 24px;
 }
 
+.MuiTable-root-1 {
+    width: 70%!important;
+}
+
 h3 {
   margin: 0;
+}
+
+.teal {
+  background-color: #26A69A!important;
 }
 
 /* @keyframes App-logo-pulse {

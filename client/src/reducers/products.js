@@ -22,7 +22,7 @@ const initialState = [
     title: "Skort",
     description: "Has a slight identity crisis",
     price: 9,
-    picture: "../media/skort.jpg",
+    picture: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQIA4ITydsXK1xikneDcOkfXUJGXqRbRMZAQW-bg5eVifHrpQXGhgdZKmVUe4FAw9QcLtuHh8KH&usqp=CAc",
     email: "confused@befuddled.com",
     phone: "+27 4 773 5276"
   }

@@ -21,10 +21,12 @@
 .App-intro {
   font-size: large;
 }
-/* 
-.ProductList {
-  margin: 0 auto;
-} */
+
+.Details {
+  /* display: inline-flex; */
+  display: inline-block;
+  line-height: 32px
+}
 
 table {
   margin: 0 auto;

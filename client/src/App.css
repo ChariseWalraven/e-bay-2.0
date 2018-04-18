@@ -21,6 +21,16 @@
 .App-intro {
   font-size: large;
 }
+/* 
+.ProductList {
+  margin: 0 auto;
+} */
+
+table {
+  margin: 0 auto;
+  padding: 2.0em;
+  line-height: 24px;
+}
 
 @keyframes App-logo-pulse {
   0% { transform: scale(1.0); }

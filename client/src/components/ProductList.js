@@ -12,11 +12,12 @@ export class ProductList extends PureComponent {
   }
 
   componentWillMount(){
-    this.props.fetchAllProducts()
+     this.props.fetchAllProducts()
   }
 
   render() {
     const { products } = this.props.products
+    if(!products) return {}
     // {console.log(products)}
     
     return (

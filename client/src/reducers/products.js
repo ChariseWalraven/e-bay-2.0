@@ -1,4 +1,4 @@
-import { FETCHED_ALL_PRODUCTS, FETCHED_PRODUCT } from "../actions/products";
+import { FETCHED_ALL_PRODUCTS, FETCHED_PRODUCT, CREATE_PRODUCT } from "../actions/products";
 
 const initialState = {
   products:
@@ -40,6 +40,10 @@ export default function(state = initialState, action){
 
     case FETCHED_PRODUCT:
       return action.payload
+
+    case CREATE_PRODUCT:
+      console.log('hello from the reducer', action.payload);
+      return state
 
     default:
       return state

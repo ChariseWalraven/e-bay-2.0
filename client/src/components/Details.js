@@ -1,37 +1,41 @@
 import React, { PureComponent } from 'react'
+import { fetchProduct } from '../actions/products'
 import { connect } from 'react-redux'
 
 export class Details extends PureComponent {
+  componentWillMount(props) {
+    this.props.fetchProduct(this.props.match.params.id)
+  }
   render(){
-    const { products } = this.props
+    const { product } = this.props
     return (
       <div className="Details">
-        {console.log(products)}
+        {console.log(product)}
         <div>
           <strong>Title:</strong>
-          <p>{products.title || 'Hey!'}</p>
-        </div>
-        <div>
-          <strong>Description:</strong>
-          <p>{ products.description || 'Hey!' }</p>
-        </div>
-        <div>
-          <strong>Price:</strong>
-          <p>{ products.price || 'Hey!' }</p>
+          <p>{product.title || 'Hey!'}</p>
         </div>
         <div>
           <strong>Photo:</strong>
-          <br/>
-          <img src={products.picture} alt={products.title}/>
-          <br/>
+          <br />
+          <img src={product.picture} alt={product.title} />
+          <br />
+        </div>
+        <div>
+          <strong>Description:</strong>
+          <p>{ product.description || 'Hey!' }</p>
+        </div>
+        <div>
+          <strong>Price:</strong>
+          <p>{ product.price || 'Hey!' }</p>
         </div>
         <div>
           <strong>Email:</strong>
-          <p>{ products.email || 'Hey!' }</p>
+          <p>{ product.email || 'Hey!' }</p>
         </div>
         <div>
           <strong>Phone:</strong>
-          <p>{ products.phone || 'Hey!' }</p>
+          <p>{ product.phone || 'Hey!' }</p>
         </div>
       </div>
     )
@@ -40,8 +44,8 @@ export class Details extends PureComponent {
 
 const mapStateToProps = (state, props) => {
   return {
-    products: state.products.find(p => p.id === Number(props.match.params.id))
+    product: state.products
   }
 }
 
-export default connect(mapStateToProps)(Details)
+export default connect(mapStateToProps, { fetchProduct })(Details)
